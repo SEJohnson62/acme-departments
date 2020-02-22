@@ -4,6 +4,7 @@ const db = require('./db');
 app.use(require('cors')());
 
 //don't forget your body parser!
+app.use(express.json());
 
 app.get('/api/departments', (req, res, next)=> {
   db.readDepartments()
